@@ -1,0 +1,569 @@
+\documentclass{scrartcl}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\begin{document}
+
+\section{Grundlagen ueber reelle Zahlen}
+
+\subsection{Geordnete Koerper}
+
+\paragraph{Definition 1}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei A eine Menge. Eine Relation $ \prec \subseteq $ AxA heisst totale Ordnung.\\
+1) $ \prec $ ist eine Ordnungsrelation (reflexiv, antisymetrisch, transitiv)\\
+2) $ \forall $ a,b $ \in $ A $ \lbrace $ a $ \prec $ b oder b $ \prec $ a $ \rbrace $
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bezeichnung 1}
+\begin{tabbing}
+\begin{tabular}{l}
+Ist a $ \prec $ b und a $ \neq $ b, so schreiben wir a $ \prec $ b
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 1}
+\begin{tabbing}
+\begin{tabular}{l}
+Die natuerliche Ordnung $ \leq $ der reellen Zahlen, ist eine totale Ordnung.\\
+Sind a,b $ \in \Re $ mit a < b, dann a+c < b+c fuer alle c $ \in \Re$\\
+(a=5, b=6, c=2, 5<6, 5+2 < 6+2, d.h. 7<8)\\
+0<a,b $ \Rightarrow $ 0 < a*b\\
+(a = 5, b = 6, 0 < 5*6 = 30)
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Definition 2}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei (K,+,*) ein Koerper mit Nullelement 0 und $ \prec $ eine totale Ordnung auf K. Dann heisst $ \prec $ Anordnung wenn : \\
+1) $ \forall x,y,z \in K (y<z \Rightarrow x+y < x+z) $ \\
+2) $ \forall x,y,z \in K (0<x,y \Rightarrow 0<x*z) $\\
+$ (K,+,*,\prec) $ heisst geordneter Koerper.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 2}
+\begin{tabbing}
+\begin{tabular}{l}
+$( \Re ,+,*, \prec ) $ heisst geordneter Koerper
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 1}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $ (K,+,*,\prec) $ ein geordneter Koerper.\\
+Dann gilt $ 0\prec a \; oder \; a=0 \; oder \; 0\prec -a \; fuer \; a \in K $
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 1)}
+\begin{tabbing}
+\begin{tabular}{l}
+Angenommen $ a \prec 0 $ und $ a \neq 0 $.\\
+Dann $ a \prec 0  $ nach Definition 1 und $ a-a \prec -a $, d.h.
+$ 0 \prec -a $ nach Definition 2
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 2}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $ (K,+,*,\preceq) $ ein geordneter Koerper und $ a,b,c,d \in K $.\\
+Ist $ a \preceq b\; und\; c \preceq d,\; dann\; a+c \preceq b+d. $
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 2)}
+\begin{tabbing}
+\begin{tabular}{l}
+Aus $ a\preceq b $ folgt $ a+c \preceq b+c $.\\
+Aus $ c\preceq d $ folgt $ b+c \preceq b+d $.\\
+Die Transitivitaet liefert : $ a+c \preceq b+d $
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 1}
+\begin{tabbing}
+\begin{tabular}{l}
+Ist a=c=0, dann liefert Satz 2 : 
+$ (0 \preceq b\; und\; 0 \preceq d) \Rightarrow 0 \preceq b+d. $
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Definition 3}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei (K,+,*) ein Koerper mit Nullelement D und $P\subseteq K$. \\
+P heisst Positivbereich von K, wenn\\
+1) Fuer alle $a\in K\setminus\{ 0\}$ gilt entweder $a\in P$ oder $-a\in P$\\
+2) $a,b\in P \Rightarrow a+b, a*b\in P$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bezeichnung 2}
+\begin{tabbing}
+\begin{tabular}{l}
+Wir setzen $P_< := \{ a\in K| 0 \prec a\}$ 
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 3}
+\begin{tabbing}
+\begin{tabular}{l}
+Ist $(K,+,*,\preceq)$ ein geordneter Koerper, dann ist \\
+$P_<$ ein Positivbereich.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 3)}
+\begin{tabbing}
+\begin{tabular}{l}
+1) Es sei $a\in K\setminus \{ 0\}$. Es sei $a \notin P_<$ dann gilt\\
+a = 0 oder $0 \prec -a$ nach Satz 1, d.h.\\
+$0 \prec -a$ da $a \neq 0$. Somit $(-a) \in P_<$.\\
+Ist $a\in P_<$, d.h. $0\prec a$, $-a+0 \prec a-a$.\\
+$-a \prec 0$, d.h. $-a\in P_<$. Analog $-a\in P_< \Rightarrow a \notin P_<$.\\
+Somit gilt entweder $a\in P_< \; oder \; -a\in P_<$\\
+2) Es seien $a,b\in P_<$, d.h. $0 \prec a, 0\prec b$. Nach Bemerkung 1 gilt\\
+$0 \prec a+b$ und $a+b\in P_<$. Ausserdem gilt $0\prec a*b$ nach Definition 2, d.h. $a*b\in P_<.$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bezeichnung 3}
+\begin{tabbing}
+\begin{tabular}{l}
+Wir setzen $\prec_P = \{ (x,y)| y+x\in P\cup\{ 0\} \}$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 4}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*)$ ein Koerper mit Nullelement 0 und $P \subseteq K$ ein Positivbereich.\\
+Dann ist $(K,+,*,\prec_P)$ ein geordneter Koerper.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 4)}
+\begin{tabbing}
+\begin{tabular}{l}
+Zunaechst zeigen wir, das $\prec_P$ eine totale Ordnung ist (Definition 1)\\
+- refelexiv : Es sei $a\in K$. Dann $a-a=0$, d.h. $a \prec_P a$ \\
+- antisymetrisch : $a \prec_P b$ und $b \prec_P a$, dann $b-a\in P\cup\{ 0\}$ und $a-b\in P\cup \{ 0\}$.\\
+Ist $b-a\in P$, dann $-(b-a)\notin P$ (Definition 3), d.h.\\
+Ist $b-a\in P$, ergibt sich $b-a=0$ also a-b.\\
+-transitiv : Es seien $a\prec_P b$ und $b\prec_P c$, d.h.\\
+$b-a\in P\cup\{ 0\}$ und $c-b\in P\cup\{ 0\}$.\\
+Dann $c-a=(c-b) + (b-a)\in P\cup\{ 0\}$ nach Definition 3\\
+\\
+Damit ist $\prec_P$ eine Ordnungsrelation\\
+Es seien $a,b\in K.$ ist a=b, dann a-b=0, d.h. $a \prec_P b$.\\
+Ist $a \neq b$, d.h. $b-a \neq 0$. Dann gilt entweder $(b-a)\in P,\;-(b-a)\in P.$\\
+$a-b\in P$ nach Definition 3\\
+d.h. $a \prec_P a$ oder $b \prec_P a$\\
+Damit ist $\prec_P$ eine totale Ordnung und wir haben noch 1) und 2) aus Definition 2 zu zeigen.\\
+\\
+1) Es seien $x,y,z\in K$ mit $y \prec_P z$, d.h. $z-y\in P\cup\{ 0\}$.\\
+Dann $y \notin z$ und $z-y\in P$.\\
+Dann $(z + x) - (y-x)\in P$, d.h. $y+x \prec_P z+x.$\\
+2) Es seien $0 \prec_P x,y$, d.h. $x-0\in P\cup \{ 0\}$ und $y-0\in P\cup\{ 0\}$,\\
+also $x,z \in P\cup\{ 0\}$ und somit $x,y\in P$, daraus folgt \\
+$x*y\in P$, $x*y-o\in P$ und $0 \prec_P x*y$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 2}
+\begin{tabbing}
+\begin{tabular}{l}
+Ist P ein Psoitivbereich eines geordneten Koerpers $(K,+,*,\prec)$.\\
+Dann gilt $\prec_P = \prec$
+\end{tabular}
+\end{tabbing}
+
+
+
+
+
+
+
+
+
+
+
+
+\paragraph{Satz 18}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei M eine Menge und $ \preceq $ eine totale Ordnung auf M. Dann sind die\\
+folgenden Eigenschaften aquivalent : \\
+i) $ \preceq $ erfuellt die Supremum-Eigenschaft.\\
+ii) $ \preceq $ erfuellt die Infimum-Eigenschaft.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 18) i) $ \Rightarrow $ ii)}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $ \emptyset \neq B \subseteq M $ nach unten beschraenkt.\\
+Wir setzen $ U_B = \{ x \in M | x\;ist\;untere\;Schranke\;von\;B \} $ \\ 
+$ U_B  \neq \emptyset $, da B nach unten becshraenkt ist.\\
+$ U_B $ ist nach oben beschraenkt, denn fuer $ b\in B $ \\
+gilt $ x \preceq b $ fuer alle $ x\in U_B \; Da \preceq $ die \\
+Supremum-Eigenschaft erfuellt, existiert $ Sup(U_B)$.\\
+Wir zeigen, $Sup(U_B)$ = Inf(B). Es sei $ b\in B $. Da b eine obere Schranke\\
+von $U_B$ ist, gilt $Sup(U_B) \preceq $ b.\\
+($Sup(U_B)$ ist die kleinste obere Schranke von $ U_B $)\\
+Somit ist $Sup(U_B)$ untere Schranke von B.\\
+Es sei $ e\in U_B $ und $ u \preceq Sup(U_B) $. Somit\\
+ist $Sup(U_B)$ die groesste untere Schranke von B, d.h.\\
+$Sup(U_B) = Inf(B)$. Also existiert das Infimum von B.\\
+i) $ \Rightarrow $ i) .Es sei $ \emptyset \neq B \subseteq M $ und nach \\
+oben beschraenkt.\\
+Wir setzen $ O_B :=\{ x\in M | x\;ist\;obere\;Schranke\;von\;B \}$.\\
+Man kann analog zeigen, dass $Inf(O_B)$ existiert und Sup(B) = $Inf(O_B)$. 
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Definition 10}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei M eine Menge und $ \preceq $ eine totale Ordnung auf M.\\
+$\preceq$ heisst vollstaendige Ordnung, wenn $\preceq$ die\\
+Supremum-Eigenschaft erfuellt.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Definition 11}
+\begin{tabbing}
+\begin{tabular}{l}
+ein geordneter Koerper $(K,+,*,\preceq )$ heisst vollstaendig wenn\\
+$\preceq$ eine vollstaendige Ordnung ist.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 19}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein vollstaendiger Koerper.\\
+Dann ist die Anordnung $\preceq$ archimedisch.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 19)}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $a \in K$. Es sei $a \preceq 0$. Dann gilt \\
+$a \preceq 1 \; denn\; 0 \preceq 1$. Es sei $0 \preceq a$.\\
+Angenommen, es gibt kein $n \in \aleph $ mit $a \preceq n$ \\
+$ (\exists n\;a \prec n) \sim (\forall n\;n\preceq a)$. Dann $n\preceq a$ \\
+fuer alle $n\in \aleph $. Dann $ \aleph \subseteq K $ nach oben\\
+beschraenkt. Da $\preceq$ eine vollstaendige Ordnung ist, existiert 
+Sup($ \aleph $)\\
+Aus $ -1 \prec 0 $ folgt $Sup(\aleph) -1 \prec Sup(\aleph)$ \\
+d.h.$Sup(\aleph)-1$ ist keine obere Schranke von $\aleph \subseteq K$. \\
+Damit existiert ein $m\in \aleph$ mit $Sup(\aleph)-1 \prec m+1$ \\
+$(Sup(\aleph)-1 )+1\prec m+1$ , d.h. $Sup(\aleph)\prec m+1 \in \aleph$\\
+Dies ist ein Widerspruch zu Sup($\aleph$) ist obere\\
+Schranke von $\aleph \subseteq K$. Damit ist die Annahme falsch und es existiert $n\in \aleph$ mit a<n.
+\end{tabular}
+\end{tabbing}
+
+\subsection{Wurzeln}
+
+\paragraph{Definition 12}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei (K,+,*) ein Koerper, $a,y\in K$\\
+$ 2 \leq k \in \aleph $. Ist yk = a, dann heisst yk-te Wurzel aus a.\\
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 12}
+\begin{tabbing}
+\begin{tabular}{l}
+3 und (-3) und 4-te Wurzel aus 81 : $\sqrt[4]{81}$\\
+(-3) ist 3-te Wurzel aus -27 : $\sqrt[3]{-27}$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 20}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein total geordneter Koerper \\
+$ n\in \aleph \setminus \{ 0\} $ und $a\in K$ mit $ 0 \preceq a$.
+Dann gibt es hoechstens ein $y\in K$ mit $0 \prec y \; und y^n = a$ .\\
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 20)}
+\begin{tabbing}
+\begin{tabular}{l}
+Es seien $y_1,y_2 \in K$ mit $y^n_1 = y^n_2 = a$.\\
+Dann $y_1 \preceq y_2$ oder $y_2 \preceq y_1$ oder $ y_1 = y_2$.\\
+Es sei $0\prec y_1 \prec y_2$ Wir zeigen mit vollstaendiger Induktion\\
+dass $0 \prec <y^n_1 \prec y^n_2$\\
+IA : n=1 ist klar nach Voraussetzung $ 0 \prec y_1 \prec y_2 $\\
+IV : n=k Es gilt $ 0 \prec y^k_1 \prec y^k_2$.\\
+IBh: n=k+1 Es gilt $0 \prec y^{k+1}_1 \prec y^{k+1}_2$\\
+IBw: Nach IV gilt $0 \prec y^k_1 \prec y^k_2$ und $0\prec y_1$ \\
+Nach Satz 8a) erhaelt man\\
+$0 \prec y^{k+1}_1 \prec y^{k+1}_2$ Aus $y_1 \prec y_2$ und\\
+$0 \prec y_2$ folgt $ y_1y_2^k \prec y_2^{k+1} $ (Satz 8a). \\
+Die Transitivitaet liefert :\\
+$0 \prec y_1^{k+1} \prec y_2^ky_1\prec y_2^{k+1}$, d.h.\\
+$0\prec y_1^{k+1} \prec y_2^{k+1})$\\
+Damit $y_1^n \neq y_2^n$ , ein Widerspruch. Analog erhaelt man\\
+ein Widerspruch falls $y_2 \prec y_1$ . Also $y_1 = y_2$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 20.a}
+\begin{tabbing}
+\begin{tabular}{l}
+(O.B.) Es sei (K,+,*,$\preceq$) ein archimedischer Koerper,\\
+$n\in \aleph \setminus \{ 0\}$ und $a\in K$ mit $0\prec a$.\\
+Dann sind die folgenden Aussagen aequivalent.\\
+i) Es existiert ein $y\in K$ mit $0\prec y$ und $y^n=a$\\
+ii) Die Menge B :=$\{ x\in K| x^n=a\}$ hat ein supremum.\\
+und es gilt $Sup(B)^n=a$ sowie $0\prec sup(B)$.\\
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 6}
+\begin{tabbing}
+\begin{tabular}{l}
+Ist (K,+,*,$preceq$) ein vollstaendiger Koerper,\\
+$a \in K $ mit $0 \prec a$ und $n \in \aleph \setminus \{ 0\}$.\\
+Dann gibt es genau ein $y \in K$ mit $0\prec y$ und $y^n = a$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bezeichnung}
+\begin{tabbing}
+\begin{tabular}{l}
+Man schreibt $ \sqrt[n]{a}$ = y oder y = $a^{1/n}$\\
+fuer die n-te Wurzel aus a.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 21}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei (K,+,*) ein Koerper. Dann existiert hoechstens eine totale Ordnung\\
+$\preceq$, so dass (K,+,*,$\preceq$) vollstaendig ist. 
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 21)}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $\preceq$ eine totale Ordnung, so dass (K,+,*,$\prec$)\\
+vollstaendig ist. Es sei $a\in K\setminus \{ 0\}$. Ist a=x fuer\\
+$x\in K\setminus \{ 0\}$, dann ist $a=x^2 \in P_<$ nach Satz 5. d.h. $0\prec a$\\
+Ist $0 \prec a$, dann existiert ein $x\in K\setminus \{ 0\}$ \\
+mit $a=x^2$ nach Bemerkung 6.\\
+da (K,+,*,$\preceq$) vollstaendig ist. Dann gilt \\
+$0 \prec a \Leftrightarrow x \in K \setminus \{ 0\} mit x^2=a $existiert.\\
+Dies zeigt $P_< = \{ x^2|x\in K\setminus \{ 0\} \}$ fuer jede totale Ordnung\\
+$preceq$ fuer die (K,+,*,$\preceq$) vollstaendig ist. Nach Bemerkung 2 gilt\\
+$ \preceq = \preceq_{P_<} $. Ausserdem gilt \\
+$\preceq_{P_<} = \{ (a,b)|b-a \in \{ x^2|x \in K\setminus \{ 0\} \}\cup \{ 0\} \}$\\
+Dies zeigt, dass die totale Ordnung eindeutig durch den Koerper (K,+,*)\\
+festgelegt ist (falls eine derartige totale Ordnung $\preceq$ existiert)
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 7}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $a\in K$ mit $0 \prec a$ und $m,n\in \aleph \setminus \{ 0\}$.\\
+Dann gilt $\sqrt[n]{a^m} = (\sqrt[n]{a})^m$\\
+und $\sqrt[n]{\sqrt[m]{a}}=\sqrt[nm]{a}=\sqrt[m]{\sqrt[n]{a}}$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bezeichnung}
+\begin{tabbing}
+\begin{tabular}{l}
+$a^{m/n} = \sqrt[n]{a^m}$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 13}
+\begin{tabbing}
+\begin{tabular}{l}
+$\sqrt[2]{\sqrt[3]{64}} = \sqrt[2]{4} = 2$\\
+$\sqrt[3]{\sqrt[2]{64}}=\sqrt[3]{8}=2$\\
+$\sqrt[6]{64}=2$\\
+$2^{4/2} = \sqrt[2]{2^4}=\sqrt[2]{16}=4$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 8}
+\begin{tabbing}
+\begin{tabular}{l}
+1) Fuer $q\in Q$ mit q<0 und $a\in K$ gilt $a^q=(a^{-q})^{-1}$\\
+2) $q\in Q$ und $a,b\in K$ mit $0\prec a,b$ gilt $(ab)^q=a^qb^q$\\
+3) Fuer $p,q \in Q$ und $a\in K$ mit $0\prec a$ gilt\\
+$(a^p)^q = a^{p*q}$ und $a^p*a^q = a^{p+q}$\\
+4) Fuer $q\in Q^+$ und $a,b\in K$ mit $0 \preceq a \prec b$ gilt\\
+$a^q\prec b^q$
+5) Fuer $q\in Q$ mit $q\prec 0$ und $a,b\in K$ mit\\
+$0 \prec a \prec b$ gilt $b^q \prec a^q$\
+\end{tabular}
+\end{tabbing}
+
+\subsection{Die reellen Zahlen als DedeKind-Schnitte}
+
+\paragraph{Definition 13}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $\emptyset\neq M \subset Q$. M heisst DedeKind-Schnitt,\\
+wenn fuer alle $p\in M$ gilt $\{ a\in Q|a\preceq p \}\subset M$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 9}
+\begin{tabbing}
+\begin{tabular}{l}
+Ist M ein DedeKind-Schnitt dann gilt
+a) $\forall p\in M \forall a\in Q \{ a\leq p \Rightarrow a\in M \}$
+b) $\forall p\in M \exists r\in M \{ p<r \}$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 14}
+\begin{tabbing}
+\begin{tabular}{l}
+$M=\{ x\in Q|x^3 < -1 \}$ Wir wollen zeigen, dass M ein DedeKind-Schniit ist\\
+Es sei $p\in M$, d.h. $p^3<-1$. Fuer $a\in Q$ mit $a\leq p$ gilt\\
+$a^3 \leq p^3 < -1$, d.h. $a^3 < -1$. Dann ist $\{ a\in Q|a \leq p\}\subseteq M$\\
+Es gilt $p \neq -1$ und nach Satz 17 existiert ein $r\in Q$ mit\\
+$p < r < -1$, d.h. $r^3<-1$ und somit $r\in M$. Dies zeigt\\
+$\{ a\in Q|a\subseteq p\}\subset M$, da r nicht zur linken Menge gehoert,\\
+aber in M liegt.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 22}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $M \subseteq Q$ ein Dedekind-Schnitt.\\
+Dann ist M eine nach oben beschraenkte Menge in dem Koerper $(Q,+,*,\leq)$\\
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 22)}
+\begin{tabbing}
+\begin{tabular}{l}
+Angenommen, M ist nicht nach oben beschraenkt.\\
+.[Dann gilt es zu jedem $m\in \aleph$ ein $q\in M$ mit $m \subseteq q$] *\\
+Es sei $q\in Q$. Dann existiert ein $n\in \aleph\setminus\{ 0\}$\\
+mit $q\subset n $ (Def 6), da $(Q,+,*,\leq)$ archimedisch ist.\\
+Zu n existiert wegen (*) ein $p\in M$ mit $n \leq p$, d.h. $n \in M$, da\\
+M Dedekind-Schnitt und wegen q<n ist auch $q\in M$. Also \\
+$Q \subseteq M$, das widerspricht $M \neq Q$ (Definition 13)
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 23}
+\begin{tabbing}
+\begin{tabular}{l}
+(O.B.) Man kann auf der Menge aller Dedekind-Schnitte (bezeichnet mit M*)\\
+eine Addition $\oplus$ und eine Multiplikation $\odot$ sowie eine totale\\
+Ordnung $\preceq$ definieren, sodass $(M*,\oplus,\odot,\preceq)$\\
+ein vollstaendiger Koerper ist, der $(Q,+,*)$ enthaelt und $\preceq$\\
+die natuerliche Ordnung $leq$ der rationalen Zahlen fortsetzt.\\
+Jeder geordnete Koerper mit dieser Eigenschaft ist isomorph zu\\
+$(M*,\oplus,\odot,\preceq)$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bezeichnung}
+\begin{tabbing}
+\begin{tabular}{l}
+Der in Satz 23 betrachtete Koerper $(M*,\oplus,\odot,\preceq)$\\
+wird der Koerper der reellen Zahlen genannt und mit (R,+,*) bezeichnet.
+\end{tabular}
+\end{tabbing}
+
+\subsection{Absolutbetrag und Bewertung}
+
+\paragraph{Definition 14}
+\begin{tabbing}
+\begin{tabular}{l}
+Es seien $(K,+,*,\preceq)$ ein geordneter Koerper mit Nullelement 0\\
+und $a\in K$ . Dann heisst\\
+$|a|:=\lbrace a falls 0 \preceq a\; oder\; -a falls a\prec 0$ \\
+Absolutbetrag von a
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung}
+\begin{tabbing}
+\begin{tabular}{l}
+Der Absolutbetrag von a ist von der Anordnung $\preceq$ abhaengig.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 15}
+\begin{tabbing}
+\begin{tabular}{l}
+Ist $r\in \Re$, dann beschreibt |r| bezueglich der\\
+natuerlichen Ordnung $\leq$ der reellen Zahlen den Abstand von r\\
+zum Nullpunkt auf dem genormten Zahlenstrahl.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 11}
+\begin{tabbing}
+\begin{tabular}{l}
+a) Es gilt $|a|=|-a|$\\
+b) $|a| \geq 0$\\
+c) $|a| = 0 \Leftrightarrow a=0$\\
+d) $|a*b| = |a|*|b|$\\
+e) $|a+b| \leq |a|+|b| (Dreiecksungleichung)$\\
+f) $|a|-|b| \leq |a-b|,|a+b|$\\
+g) $||a|-|b|| \leq  |a-b|$\\
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bezeichnung}
+\begin{tabbing}
+\begin{tabular}{l}
+i ist ein Symbol mit $i\; \notin)\Re$. Wir setzen $i^2=-1$.\\
+Sind $a,b\in\Re$, dann heisst a+b komplexe Zahl.\\
+a heisst Realteil, b heisst Imaginaerteil.\\
+$C:= \{ a+ib|a,b\in\Re\}$ - MEnge der $|a+ib|:=\sqrt[2]{a^2+b^2}$\\
+heisst Norm von a+ib\\
+z=a+ib, dann heisst $\overline{z}:=a-ib$ konjugiert komplexe Zahl\\
+zu z = a+ib
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 12}
+\begin{tabbing}
+\begin{tabular}{l}
+a) Es gilt $(a+ib)(a+ib) = aa'-bb'+i(ab'+a'b)$\\
+b) $(a+ib)+(a'+ib')=(a+a')+i(b*b')$\\
+Ist z=a+ib, dann $z*\overline{z}=a^2+b^2$, d.h. \\
+$|z| = \sqrt[2]{z*\overline{z}}$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 16}
+\begin{tabbing}
+\begin{tabular}{l}
+z = 4+i3  ,  $|z|=\sqrt[2]{4^2+3^2}=\sqrt{25}=5$\\
+$z_1 = 4+i3, z_2= 1-i2$\\
+$z_1+z_2= 4+1+i(3-2)=5+i$\\
+$z_1*z_2= 4*1-(3(-2))+i(4(-2)+3*1)=10+i(-5) = 10-i5$
+\end{tabular}
+\end{tabbing}
+
+\end{document}
