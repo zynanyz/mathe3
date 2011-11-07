@@ -1,19 +1,22 @@
-\documentclass{scrartcl}
-\usepackage[latin1]{inputenc}
+\documentclass[a4paper]{scrartcl}
+
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage{amsmath}
+\usepackage{amssymb}
+
 \begin{document}
 
-\section{Grundlagen ueber reelle Zahlen}
+\section{Grundlagen über reelle Zahlen}
 
-\subsection{Geordnete Koerper}
+\subsection{Geordnete Körper}
 
 \paragraph{Definition 1}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei A eine Menge. Eine Relation $ \prec \subseteq $ AxA heisst totale Ordnung.\\
-1) $ \prec $ ist eine Ordnungsrelation (reflexiv, antisymetrisch, transitiv)\\
+Es sei A eine Menge. Eine Relation $ \prec \subseteq  AxA $heißt totale Ordnung.\\
+1) $ \prec $ ist eine Ordnungsrelation (reflexiv, antisymmetrisch, transitiv)\\
 2) $ \forall $ a,b $ \in $ A $ \lbrace $ a $ \prec $ b oder b $ \prec $ a $ \rbrace $
 \end{tabular}
 \end{tabbing}
@@ -21,15 +24,15 @@ Es sei A eine Menge. Eine Relation $ \prec \subseteq $ AxA heisst totale Ordnung
 \paragraph{Bezeichnung 1}
 \begin{tabbing}
 \begin{tabular}{l}
-Ist a $ \prec $ b und a $ \neq $ b, so schreiben wir a $ \prec $ b
+Ist a $ \prec $ b und a $ \neq $ b, so schreiben wir a $ \prec $ b.
 \end{tabular}
 \end{tabbing}
 
 \paragraph{Beispiel 1}
 \begin{tabbing}
 \begin{tabular}{l}
-Die natuerliche Ordnung $ \leq $ der reellen Zahlen, ist eine totale Ordnung.\\
-Sind a,b $ \in \Re $ mit a < b, dann a+c < b+c fuer alle c $ \in \Re$\\
+Die natürliche Ordnung $ \leq $ der reellen Zahlen, ist eine totale Ordnung.\\
+Sind a,b $ \in \mathbb{R} $ mit a < b, dann a+c < b+c für alle c $ \in \mathbb{R}$\\
 (a=5, b=6, c=2, 5<6, 5+2 < 6+2, d.h. 7<8)\\
 0<a,b $ \Rightarrow $ 0 < a*b\\
 (a = 5, b = 6, 0 < 5*6 = 30)
@@ -39,24 +42,24 @@ Sind a,b $ \in \Re $ mit a < b, dann a+c < b+c fuer alle c $ \in \Re$\\
 \paragraph{Definition 2}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei (K,+,*) ein Koerper mit Nullelement 0 und $ \prec $ eine totale Ordnung auf K. Dann heisst $ \prec $ Anordnung wenn : \\
+Es sei (K,+,*) ein Körper mit Nullelement 0 und $ \prec $ eine totale Ordnung auf K. Dann heißt $ \prec $ Anordnung wenn : \\
 1) $ \forall x,y,z \in K (y<z \Rightarrow x+y < x+z) $ \\
 2) $ \forall x,y,z \in K (0<x,y \Rightarrow 0<x*z) $\\
-$ (K,+,*,\prec) $ heisst geordneter Koerper.
+$ (K,+,*,\prec) $ heißt geordneter Körper.
 \end{tabular}
 \end{tabbing}
 
 \paragraph{Beispiel 2}
 \begin{tabbing}
 \begin{tabular}{l}
-$( \Re ,+,*, \prec ) $ heisst geordneter Koerper
+$( \mathbb{R} ,+,*, \prec ) $ heißt geordneter Körper.
 \end{tabular}
 \end{tabbing}
 
 \paragraph{Satz 1}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $ (K,+,*,\prec) $ ein geordneter Koerper.\\
+Es sei $ (K,+,*,\prec) $ ein geordneter Körper.\\
 Dann gilt $ 0\prec a \; oder \; a=0 \; oder \; 0\prec -a \; fuer \; a \in K $
 \end{tabular}
 \end{tabbing}
@@ -66,14 +69,14 @@ Dann gilt $ 0\prec a \; oder \; a=0 \; oder \; 0\prec -a \; fuer \; a \in K $
 \begin{tabular}{l}
 Angenommen $ a \prec 0 $ und $ a \neq 0 $.\\
 Dann $ a \prec 0  $ nach Definition 1 und $ a-a \prec -a $, d.h.
-$ 0 \prec -a $ nach Definition 2
+$ 0 \prec -a $ nach Definition 2.
 \end{tabular}
 \end{tabbing}
 
 \paragraph{Satz 2}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $ (K,+,*,\preceq) $ ein geordneter Koerper und $ a,b,c,d \in K $.\\
+Es sei $ (K,+,*,\preceq) $ ein geordneter Körper und $ a,b,c,d \in K $.\\
 Ist $ a \preceq b\; und\; c \preceq d,\; dann\; a+c \preceq b+d. $
 \end{tabular}
 \end{tabbing}
@@ -83,7 +86,7 @@ Ist $ a \preceq b\; und\; c \preceq d,\; dann\; a+c \preceq b+d. $
 \begin{tabular}{l}
 Aus $ a\preceq b $ folgt $ a+c \preceq b+c $.\\
 Aus $ c\preceq d $ folgt $ b+c \preceq b+d $.\\
-Die Transitivitaet liefert : $ a+c \preceq b+d $
+Die Transitivität liefert : $ a+c \preceq b+d $
 \end{tabular}
 \end{tabbing}
 
@@ -98,9 +101,9 @@ $ (0 \preceq b\; und\; 0 \preceq d) \Rightarrow 0 \preceq b+d. $
 \paragraph{Definition 3}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei (K,+,*) ein Koerper mit Nullelement D und $P\subseteq K$. \\
-P heisst Positivbereich von K, wenn\\
-1) Fuer alle $a\in K\setminus\{ 0\}$ gilt entweder $a\in P$ oder $-a\in P$\\
+Es sei (K,+,*) ein Körper mit Nullelement D und $P\subseteq K$. \\
+P heißt Positivbereich von K, wenn\\
+1) Für alle $a\in K\setminus\{ 0\}$ gilt entweder $a\in P$ oder $-a\in P$\\
 2) $a,b\in P \Rightarrow a+b, a*b\in P$
 \end{tabular}
 \end{tabbing}
@@ -115,7 +118,7 @@ Wir setzen $P_< := \{ a\in K| 0 \prec a\}$
 \paragraph{Satz 3}
 \begin{tabbing}
 \begin{tabular}{l}
-Ist $(K,+,*,\preceq)$ ein geordneter Koerper, dann ist \\
+Ist $(K,+,*,\preceq)$ ein geordneter Körper, dann ist \\
 $P_<$ ein Positivbereich.
 \end{tabular}
 \end{tabbing}
@@ -130,7 +133,7 @@ Ist $a\in P_<$, d.h. $0\prec a$, $-a+0 \prec a-a$.\\
 $-a \prec 0$, d.h. $-a\in P_<$. Analog $-a\in P_< \Rightarrow a \notin P_<$.\\
 Somit gilt entweder $a\in P_< \; oder \; -a\in P_<$\\
 2) Es seien $a,b\in P_<$, d.h. $0 \prec a, 0\prec b$. Nach Bemerkung 1 gilt\\
-$0 \prec a+b$ und $a+b\in P_<$. Ausserdem gilt $0\prec a*b$ nach Definition 2, d.h. $a*b\in P_<.$
+$0 \prec a+b$ und $a+b\in P_<$. Außerdem gilt $0\prec a*b$ nach Definition 2, d.h. $a*b\in P_<.$
 \end{tabular}
 \end{tabbing}
 
@@ -144,17 +147,17 @@ Wir setzen $\prec_P = \{ (x,y)| y+x\in P\cup\{ 0\} \}$
 \paragraph{Satz 4}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $(K,+,*)$ ein Koerper mit Nullelement 0 und $P \subseteq K$ ein Positivbereich.\\
-Dann ist $(K,+,*,\prec_P)$ ein geordneter Koerper.
+Es sei $(K,+,*)$ ein Körper mit Nullelement 0 und $P \subseteq K$ ein Positivbereich.\\
+Dann ist $(K,+,*,\prec_P)$ ein geordneter Körper.
 \end{tabular}
 \end{tabbing}
 
 \paragraph{Beweis (Satz 4)}
 \begin{tabbing}
 \begin{tabular}{l}
-Zunaechst zeigen wir, das $\prec_P$ eine totale Ordnung ist (Definition 1)\\
-- refelexiv : Es sei $a\in K$. Dann $a-a=0$, d.h. $a \prec_P a$ \\
-- antisymetrisch : $a \prec_P b$ und $b \prec_P a$, dann $b-a\in P\cup\{ 0\}$ und $a-b\in P\cup \{ 0\}$.\\
+Zunächst zeigen wir, das $\prec_P$ eine totale Ordnung ist (Definition 1)\\
+- reflexiv : Es sei $a\in K$. Dann $a-a=0$, d.h. $a \prec_P a$ \\
+- antisymmetrisch : $a \prec_P b$ und $b \prec_P a$, dann $b-a\in P\cup\{ 0\}$ und $a-b\in P\cup \{ 0\}$.\\
 Ist $b-a\in P$, dann $-(b-a)\notin P$ (Definition 3), d.h.\\
 Ist $b-a\in P$, ergibt sich $b-a=0$ also a-b.\\
 -transitiv : Es seien $a\prec_P b$ und $b\prec_P c$, d.h.\\
@@ -180,7 +183,7 @@ $x*y\in P$, $x*y-o\in P$ und $0 \prec_P x*y$
 \paragraph{Bemerkung 2}
 \begin{tabbing}
 \begin{tabular}{l}
-Ist P ein Psoitivbereich eines geordneten Koerpers $(K,+,*,\prec)$.\\
+Ist P ein Positivbereich eines geordneten Körpers $(K,+,*,\prec)$.\\
 Dann gilt $\prec_P = \prec$
 \end{tabular}
 \end{tabbing}
@@ -188,7 +191,7 @@ Dann gilt $\prec_P = \prec$
 \paragraph{Satz 5}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $(K,+,*)$ ein Koerper mit Nullelement 0 sowie $a\in K\setminus\{ 0\}$ und \\
+Es sei $(K,+,*)$ ein Körper mit Nullelement 0 sowie $a\in K\setminus\{ 0\}$ und \\
 $P \subseteq K$ ein Positivbereich. Dann gilt $a^2\in P$
 \end{tabular}
 \end{tabbing}
@@ -204,8 +207,8 @@ Dann $a^2\in P$ oder $(-a)^2\in P$ (d.h. $a^2\in P$) nach Definition 3.
 \paragraph{Satz 6}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $(K,+,*)$ ein Koerper und P ein Positionsbereich von K.\\
-Ist $a\in P$ dann $a^{-1}\in P$ (fuer alle $a\in K\setminus\{ 0\}$)
+Es sei $(K,+,*)$ ein Körper und P ein Positionsbereich von K.\\
+Ist $a\in P$ dann $a^{-1}\in P$ (für alle $a\in K\setminus\{ 0\}$)
 \end{tabular}
 \end{tabbing}
 
@@ -220,7 +223,7 @@ Aus $a, (a^{-1})^2\in P$ folgt $a(a^{-1})^2\in P$ nach Definition 3, d.h. $a^{-1
 \paragraph{Satz 7}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $(K,+,*)$ ein Koerper mit Einselement e und $\emptyset\neq P\subseteq K$ ein Positivbereich\\
+Es sei $(K,+,*)$ ein Körper mit Einselement e und $\emptyset\neq P\subseteq K$ ein Positivbereich\\
 von K. Dann gilt $e\in P$.
 \end{tabular}
 \end{tabbing}
@@ -235,7 +238,7 @@ Nach Satz 5 gilt $e^2-e\in P$
 \paragraph{Satz 8}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $(K,+,*,\prec)$ ein geordneter Koerper mit Nullelement 0 sowie $a,b,c\in K$ mit $a\prec b$.\\
+Es sei $(K,+,*,\prec)$ ein geordneter Körper mit Nullelement 0 sowie $a,b,c\in K$ mit $a\prec b$.\\
 Dann gilt :
 a) $0\prec c \Rightarrow ca \prec cb$\\
 b) $c\prec 0 \Rightarrow cb \prec ca$
@@ -249,7 +252,7 @@ Ist c=0 oder a=b, dann ist die Aussage klar.\\
 Es seien nun $c \neq 0$ und $a\neq b$.\\
 Aus $a\prec b$ folgt $a-a\prec b-a$, d.h. $0\prec b-a$, d.h. $b-a\in P_<$\\
 wobei $P_<$ ein Positivbereich ist (Satz 3)\\
-a) $0\prec c$ heisst $c\in P_<$, so $c(b-a)\in P_<$ (Definition 3), d.h.\\
+a) $0\prec c$ heißt $c\in P_<$, so $c(b-a)\in P_<$ (Definition 3), d.h.\\
 $cb-ca\in P_<$ und $ca \prec_{P_<} cb$, d.h. $ca \prec cb$ nach Bemerkung 2.\\
 b) $c\prec 0$, also $c\prec_{P_<} 0$, d.h. $0-c\in P_<$\\
 somit $(-c)(b-a)\in P_<$, d.h. $ca-cb\in P_<,\;cb\prec_{P_<} ca$\\
@@ -260,7 +263,7 @@ also $cb \prec ca$.
 \paragraph{Satz 9}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $(K,+,*,\preceq)$ ein geordneter Koerper und $a,b\in P_<$.\\
+Es sei $(K,+,*,\preceq)$ ein geordneter Körper und $a,b\in P_<$.\\
 Ist $a\prec b$, dann $b^{-1} \prec a^{-1}$
 \end{tabular}
 \end{tabbing}
@@ -278,30 +281,30 @@ Ist $a\prec b$, dann $b^{-1} \prec a^{-1}$
 \begin{tabbing}
 \begin{tabular}{l}
 Es sei M eine Menge und $ \preceq $ eine totale Ordnung auf M. Dann sind die\\
-folgenden Eigenschaften aquivalent : \\
-i) $ \preceq $ erfuellt die Supremum-Eigenschaft.\\
-ii) $ \preceq $ erfuellt die Infimum-Eigenschaft.
+folgenden Eigenschaften äquivalent : \\
+i) $ \preceq $ erfüllt die Supremum-Eigenschaft.\\
+ii) $ \preceq $ erfüllt die Infimum-Eigenschaft.
 \end{tabular}
 \end{tabbing}
 
 \paragraph{Beweis (Satz 18) i) $ \Rightarrow $ ii)}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $ \emptyset \neq B \subseteq M $ nach unten beschraenkt.\\
+Es sei $ \emptyset \neq B \subseteq M $ nach unten beschränkt.\\
 Wir setzen $ U_B = \{ x \in M | x\;ist\;untere\;Schranke\;von\;B \} $ \\ 
-$ U_B  \neq \emptyset $, da B nach unten becshraenkt ist.\\
-$ U_B $ ist nach oben beschraenkt, denn fuer $ b\in B $ \\
-gilt $ x \preceq b $ fuer alle $ x\in U_B \; Da \preceq $ die \\
-Supremum-Eigenschaft erfuellt, existiert $ Sup(U_B)$.\\
+$ U_B  \neq \emptyset $, da B nach unten beschränkt ist.\\
+$ U_B $ ist nach oben beschränkt, denn für $ b\in B $ \\
+gilt $ x \preceq b $ für alle $ x\in U_B \; Da \preceq $ die \\
+Supremum-Eigenschaft erfüllt, existiert $ Sup(U_B)$.\\
 Wir zeigen, $Sup(U_B)$ = Inf(B). Es sei $ b\in B $. Da b eine obere Schranke\\
 von $U_B$ ist, gilt $Sup(U_B) \preceq $ b.\\
 ($Sup(U_B)$ ist die kleinste obere Schranke von $ U_B $)\\
 Somit ist $Sup(U_B)$ untere Schranke von B.\\
 Es sei $ e\in U_B $ und $ u \preceq Sup(U_B) $. Somit\\
-ist $Sup(U_B)$ die groesste untere Schranke von B, d.h.\\
+ist $Sup(U_B)$ die größte untere Schranke von B, d.h.\\
 $Sup(U_B) = Inf(B)$. Also existiert das Infimum von B.\\
 i) $ \Rightarrow $ i) .Es sei $ \emptyset \neq B \subseteq M $ und nach \\
-oben beschraenkt.\\
+oben beschränkt.\\
 Wir setzen $ O_B :=\{ x\in M | x\;ist\;obere\;Schranke\;von\;B \}$.\\
 Man kann analog zeigen, dass $Inf(O_B)$ existiert und Sup(B) = $Inf(O_B)$. 
 \end{tabular}
@@ -311,23 +314,23 @@ Man kann analog zeigen, dass $Inf(O_B)$ existiert und Sup(B) = $Inf(O_B)$.
 \begin{tabbing}
 \begin{tabular}{l}
 Es sei M eine Menge und $ \preceq $ eine totale Ordnung auf M.\\
-$\preceq$ heisst vollstaendige Ordnung, wenn $\preceq$ die\\
-Supremum-Eigenschaft erfuellt.
+$\preceq$ heißt vollständige Ordnung, wenn $\preceq$ die\\
+Supremum-Eigenschaft erfüllt.
 \end{tabular}
 \end{tabbing}
 
 \paragraph{Definition 11}
 \begin{tabbing}
 \begin{tabular}{l}
-ein geordneter Koerper $(K,+,*,\preceq )$ heisst vollstaendig wenn\\
-$\preceq$ eine vollstaendige Ordnung ist.
+ein geordneter Körper $(K,+,*,\preceq )$ heißt vollständig wenn\\
+$\preceq$ eine vollständige Ordnung ist.
 \end{tabular}
 \end{tabbing}
 
 \paragraph{Satz 19}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $(K,+,*,\preceq)$ ein vollstaendiger Koerper.\\
+Es sei $(K,+,*,\preceq)$ ein vollständiger Körper.\\
 Dann ist die Anordnung $\preceq$ archimedisch.
 \end{tabular}
 \end{tabbing}
@@ -337,17 +340,17 @@ Dann ist die Anordnung $\preceq$ archimedisch.
 \begin{tabular}{l}
 Es sei $a \in K$. Es sei $a \preceq 0$. Dann gilt \\
 $a \preceq 1 \; denn\; 0 \preceq 1$. Es sei $0 \preceq a$.\\
-Angenommen, es gibt kein $n \in \aleph $ mit $a \preceq n$ \\
+Angenommen, es gibt kein $n \in \mathbb{N} $ mit $a \preceq n$ \\
 $ (\exists n\;a \prec n) \sim (\forall n\;n\preceq a)$. Dann $n\preceq a$ \\
-fuer alle $n\in \aleph $. Dann $ \aleph \subseteq K $ nach oben\\
-beschraenkt. Da $\preceq$ eine vollstaendige Ordnung ist, existiert 
-Sup($ \aleph $)\\
-Aus $ -1 \prec 0 $ folgt $Sup(\aleph) -1 \prec Sup(\aleph)$ \\
-d.h.$Sup(\aleph)-1$ ist keine obere Schranke von $\aleph \subseteq K$. \\
-Damit existiert ein $m\in \aleph$ mit $Sup(\aleph)-1 \prec m+1$ \\
-$(Sup(\aleph)-1 )+1\prec m+1$ , d.h. $Sup(\aleph)\prec m+1 \in \aleph$\\
-Dies ist ein Widerspruch zu Sup($\aleph$) ist obere\\
-Schranke von $\aleph \subseteq K$. Damit ist die Annahme falsch und es existiert $n\in \aleph$ mit a<n.
+für alle $n\in \mathbb{N} $. Dann $ \aleph \subseteq K $ nach oben\\
+beschränkt. Da $\preceq$ eine vollständige Ordnung ist, existiert 
+Sup($ \mathbb{N} $)\\
+Aus $ -1 \prec 0 $ folgt $Sup(\mathbb{N}) -1 \prec Sup(\mathbb{N})$ \\
+d.h.$Sup(\mathbb{N})-1$ ist keine obere Schranke von $\mathbb{N} \subseteq K$. \\
+Damit existiert ein $m\in \mathbb{N}$ mit $Sup(\mathbb{N})-1 \prec m+1$ \\
+$(Sup(\mathbb{N})-1 )+1\prec m+1$ , d.h. $Sup(\mathbb{N})\prec m+1 \in \mathbb{N}$\\
+Dies ist ein Widerspruch zu Sup($\mathbb{N}$) ist obere\\
+Schranke von $\mathbb{N} \subseteq K$. Damit ist die Annahme falsch und es existiert $n\in \mathbb{N}$ mit a<n.
 \end{tabular}
 \end{tabbing}
 
@@ -356,8 +359,8 @@ Schranke von $\aleph \subseteq K$. Damit ist die Annahme falsch und es existiert
 \paragraph{Definition 12}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei (K,+,*) ein Koerper, $a,y\in K$\\
-$ 2 \leq k \in \aleph $. Ist yk = a, dann heisst yk-te Wurzel aus a.\\
+Es sei (K,+,*) ein Körper, $a,y\in K$\\
+$ 2 \leq k \in \mathbb{N} $. Ist yk = a, dann heißt yk-te Wurzel aus a.\\
 \end{tabular}
 \end{tabbing}
 
@@ -372,9 +375,9 @@ $ 2 \leq k \in \aleph $. Ist yk = a, dann heisst yk-te Wurzel aus a.\\
 \paragraph{Satz 20}
 \begin{tabbing}
 \begin{tabular}{l}
-Es sei $(K,+,*,\preceq)$ ein total geordneter Koerper \\
-$ n\in \aleph \setminus \{ 0\} $ und $a\in K$ mit $ 0 \preceq a$.
-Dann gibt es hoechstens ein $y\in K$ mit $0 \prec y \; und y^n = a$ .\\
+Es sei $(K,+,*,\preceq)$ ein total geordneter Körper \\
+$ n\in \mathbb{N} \setminus \{ 0\} $ und $a\in K$ mit $ 0 \preceq a$.
+Dann gibt es höchstens ein $y\in K$ mit $0 \prec y \; und y^n = a$ .\\
 \end{tabular}
 \end{tabbing}
 
