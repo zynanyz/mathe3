@@ -1,0 +1,153 @@
+\documentclass[10pt,a4paper,draft]{scrartcl}
+
+\usepackage[ngerman]{babel}		%deutscher Text
+\usepackage[T1]{fontenc}		%Schriftsatz T1
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+
+\begin{document}
+\section*{Mathe III - Übung}
+
+\subsection*{Übung 1}
+
+\paragraph*{Definition}
+\begin{tabbing}
+Sei K ein Körper. Dann ist $P\subset K$ ein Positivbereich, wenn gilt:\\
+1) $ \forall x \neq 0\in K,$ entweder $x\in P$ oder $-x\in P$\\
+2) $\forall x,y\in P$ ist $x + y\in P, x * y\in P$ $\Rightarrow K + P = $angeordneter 					Körper
+\end{tabbing}
+	
+\subparagraph*{Beispiel} 
+\begin{tabbing}
+$\mathbb{R}_{2}=\{0,1\}$\\
+1) $0 + 0=1 0 + 1=1 1 + 1=0$\\ 
+2) $1 * 1=1 0 * 1=1$\\	
+\end{tabbing}
+
+\paragraph*{Definition}
+\begin{tabbing}
+$\mathbb{Q},\mathbb{R}$ sind angeordnet, $\mathbb{C}$ nicht.\\
+$x(\mathbb{Q})=x(\mathbb{R})=x(\mathbb{C})=0$\\
+Folgerung$\rightarrow$ Jeder geordnete Körper hat die Charakteristik Null, aber die Umkehrung gilt nicht. 
+\end{tabbing}
+	
+\paragraph*{Definition}
+\begin{tabbing}
+Sei R ein Körper. R ist angeordnet wenn  gilt:\\
+1) wenn genau eine dieser Relationen gilt: $\forall 0\in R, a > 0, a = 0, -a < 0$\\
+2) $a > 0 und b > 0\rightarrow a + b > 0$\\
+3) $\forall 0\in \mathbb{R}, \exists n\in \mathbb{N}, sodass n - 0 > 0 \leftrightarrow n > a$ (archimedischen Axiom)\\
+\end{tabbing}	
+
+\paragraph*{Definition}
+\begin{tabbing}
+Eine Menge $M\subseteq K$ heißt nach oben oder nach unten beschränkt,\\ wenn $\forall x\in M$ ein $s\in K$ gibt, sodass $x\preceq s$ oder $s\preceq x$.\\
+z.B $M:=\{x\in \mathbb{Q} | x^{2}\preceq 2\}$ von $\mathbb{Q}$.\\
+\end{tabbing}
+
+\paragraph*{Definition}
+\begin{tabbing}
+Eine Zahl $m\in K (M\subseteq)$ heißt kleinste obere Schranke ($m = Sup(M)$), bzw. größte untere Schranke von M ($m = Inf(M)$), wenn:\\
+1) es sich um eine obere $|$ untere Schranke handelt.\\
+2) es keine anderen kleinere bzw. größere untere $|$ obere Schranke gibt.\\
+\end{tabbing}
+
+\subparagraph*{Beispiel} 
+\begin{tabbing}
+Sei $I = (0,1)$ mit $x\in I$, $t =\frac{1}{2} (1+x)$, $Inf(I) = 0 <\frac{1}{2} (1+x) < 1$,\\
+wenn Sup und Inf in der Menge liegen sagt man $m = Max = Sup$ $|$ $m = Min = Inf$.
+\end{tabbing}
+
+\paragraph*{Beispiel}
+\begin{tabbing}
+ $M =\{\frac{\sqrt{x + y}}{xy} | x,y\geq < 1\}\subseteq \mathbb{R}$\\
+ 1) Bestimmung des Supremums durch Vermutung: $sup(M) = \sqrt{2}$\\
+ 2) Durch Abschätzung: $\frac{\sqrt{x+y}}{xy} = \sqrt{\frac{x}{xy^{2}} + \frac{x}{x^{2}y}} = $
+ 	$\sqrt{\frac{1}{xy^{2}} + \frac{1}{x^{2}y}} \leq \sqrt{2}$\\
+ 3)	sei $d > 0$; $\sqrt{2} - d\geq \sqrt{\frac{x + y}{x - y}}$\\
+\end{tabbing}
+
+\textbf{Gegenbesipiel}
+\begin{tabbing}
+	Sei $x = y = 1$; $\sqrt{2} - d\geq \sqrt{2} \leftrightarrow -d\geq 0 \leftrightarrow d\leq 0\rightarrow\sqrt{2}$ ist Sup, somit ist $\sqrt{2}$ Max, denn $\sqrt{2}\in M$
+\end{tabbing}
+
+\textbf{Bestimmung des Infimums:}
+\begin{tabbing}
+1) Vermutung Null ist Infimum, d.h. setze $0 = \frac{\sqrt{x + y}}{xy}\leftrightarrow 0 =\sqrt{x + y}\leftrightarrow 0 = x + y\leftrightarrow y = -x\curvearrowright Wiederspruch\curvearrowright Inf(M) = 0$.\\
+2) Sei $0 < d < 1$; Angenommen $0 + d < \frac{\sqrt{x + y}}{xy}$; Sei $x=y=\frac{d^{3}}{2}\rightarrow 0+d<\frac{d^{3}}{1}<d^{3}<d\curvearrowright d=\frac{1}{2}, d^{3}=\frac{1}{8}\ldots$\\
+		$\curvearrowright Wiederspruch\rightarrow Inf(M)=0$ ist kein Minimum.
+\end{tabbing}
+
+\subsection*{Übung 2 - Lösung Aufgabenblatt 1}
+\paragraph*{Aufgabe 1}
+\begin{tabbing}
+$(K,+,*,\preceq)$ geordneter Körper;\\
+$\forall a,b\in K, (0_{k}\preceq a\wedge 0_{5}\preceq b)\rightarrow 0_{k}\preceq a + b$\\
+$0_{k}\leqq a\leftrightarrow 0_{k} + b\leqq a+ b\leftrightarrow b\leqq a + b$\\
+$0_{k}\leqq b\leqq a + b$\\
+\end{tabbing}
+
+\paragraph*{Aufgabe 3}
+\begin{tabbing}
+$(K,+,*,\preceq)$ geordneter Körper mit Positivbereich P.\\\\
+\textbf{Behauptung:}$\preceq_{P}=\preceq$\\\\
+
+\textbf{Axiome:} $\preceq$ heißt:\\
+ 1) totale Ordnung, wenn $\forall (a,b)\in MxM$ gilt $a\preceq b$ oder $b\preceq a$\\
+  a) $y,z\in K$ mit $y\preceq z$ so gilt $x + y\preceq x+z,\forall x\in K$\\
+  b) $y,x\in K$ mit $0\preceq x$ und  $0\prec y\rightarrow 0\preceq xy$\\\\\\\\
+
+\textbf{Axiome Positivbereich:}\\
+ 1) $\forall x\in K$ entweder $x\in P$ oder $-x\in P$\\
+ 2) $x,y\in P\rightarrow x+y\in P$\\
+ 3) $x,y\in P\rightarrow xy\in P$\\\\
+
+\textbf{Behauptung:} $\preceq_{P} =\preceq$\\
+Wir zeigen $\preceq_{P}$ ist durch $x\preceq_{P} y\leftrightarrow y-x\in P\cup \{0\}$ eine Anordnung auf K.\\
+ 1) mit $x\in K\rightarrow x-x=0\in P\cup \{0\}=\preceq_{P}$ reflexiv ist.\\
+ 
+ 2) angenommen  $x,y,z\in K$ mit $x\preceq_{P} y, y\preceq_{P} z\leftarrow y-x\in P\cup \{0\}, z-y\in P\cup\{0\}$.\\
+ 	Aus $2)\rightarrow z-x=(z-y)+(y-x)\in P\cup \{0\}, d.h. x\preceq_{P} z\rightarrow \preceq_{P}$ ist transitiv.\\
+ 
+ 3) angenommen $x\preceq_{P} y, y\preceq_{P} x\rightarrow (y-x)\vee (x-y)\in P\cup \{0\}$ wäre $x-y\in P$, so ist $x-y\neq 0$.\\
+ So wäre $y-x=-(x-y)\neq$ von P, wegen (P1). D.h. wegen $y\preceq_{P} x$ muss $y-x=0$sein.\\
+ $\rightarrow x-y=0\rightarrow x-y\rightarrow$ Antisymmetrie von $\preceq_{P}$\\
+ 
+ 4) Zeigen der Totalität von $\preceq_{P}$. Seien $x,y\in K$ mit $x\neq y$, so gilt (P1) entweder $x-y\in P$ oder $y-x\in P$,\\ d.h. $x\preceq_{P} y$ bzw. $y\preceq_{P} x\rightarrow$ Totalität von $\preceq_{P}$.\\
+\end{tabbing}
+
+\paragraph*{Aufgabe 4}
+\begin{tabbing}
+\textbf{Behauptung:} $(\mathbb{Q},+,*,\preceq)$ sei archimedisch.\\
+
+\textbf{Definition:}\\
+Ein geordneter Körper heißt archimedisch geordnet falls gilt $\forall a\in K$ gibt es ein $n\in \mathbb{N}$ mit $a<n$.\\
+
+\textbf{Beweis}\\
+$x,y\in \mathbb{N}\setminus \{0\}; dann ist \frac{x}{y}\in \mathbb{Q}\rightarrow \frac{x}{y}*y\geq \frac{x}{y}$
+\end{tabbing}
+
+\paragraph*{Aufgabe 5}
+\begin{tabbing}
+$b=\frac{1}{q}; y=\frac{1}{\epsilon}$\\
+Nach \textit{Satz 14} $n\in \mathbb{N} b^{n}>y\rightarrow b,y>0; \frac{1}{b^{n}}<\frac{1}{y}\rightarrow q^{n}<\epsilon$\\ 
+\end{tabbing}
+
+\paragraph*{Aufgabe 6}
+\begin{tabbing}
+$y,x\in K$ wobei $x<y\rightarrow 0<y-x\rightarrow n\in\mathbb{N}; \frac{1}{n} <y-x$ nach Satz 12.\\
+$\rightarrow m\in \mathbb{N}$ mit $nx<m$ (Def 6) $\rightarrow l\in \mathbb{Z}; l=\lfloor nx\rfloor +1\rightarrow l-1=\lfloor nx\rfloor\leq nx<l; x<\frac{1}{n} =\frac{l-1}{n} +\frac{1}{n}\leq x+\frac{1}{x} < x+(y-x)=y,\frac{l}{n}\in\mathbb{Q}$\\
+\end{tabbing}
+
+\paragraph*{Aufgabe 7}
+\begin{tabbing}
+$-1=-\frac{n}{n}\leq\frac{-n}{n+m}\leq\frac{m}{m+n} -\frac{n}{m+n}\leq\frac{m}{m+n}\leq\frac{m}{m} =1$\\
+$S:=\{\frac{m-n}{m+n} | m,n\in\mathbb{N_{0}} ,m+n\neq 0\}$\\
+\textbf{Behauptung:} $sup(S)=1$\\
+$\forall m,n\in \mathbb{N}, -1\leq\frac{m-n}{m+n}; \exists m,n\in \mathbb{N}, -1>\frac{m-n}{m+n}\rightarrow m=0,n=1, 1\in S$\\$
+\rightarrow -(m+n)>m-n\rightarrow -m-n>m-n\rightarrow -m>m\curvearrowright$ Widerspruch\\
+andere Richtung: $\forall m,n\in\mathbb{N}, 1\geq\frac{m-n}{m+n}; \exists m,n\in \mathbb{N}, 1<\frac{m-n}{m+n}\rightarrow m-n>m+n \rightarrow -n>n$\\
+$\curvearrowright$ Widerspruch $m=1, n=0, 1\in S$
+\end{tabbing}
+\end{document}
