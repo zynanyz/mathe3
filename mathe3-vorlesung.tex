@@ -201,6 +201,70 @@ Dann $a^2\in P$ oder $(-a)^2\in P$ (d.h. $a^2\in P$) nach Definition 3.
 \end{tabular}
 \end{tabbing}
 
+\paragraph{Satz 6}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*)$ ein Koerper und P ein Positionsbereich von K.\\
+Ist $a\in P$ dann $a^{-1}\in P$ (fuer alle $a\in K\setminus\{ 0\}$)
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 6)}
+\begin{tabbing}
+\begin{tabular}{l}
+Nach Satz 5 gilt $(a^{-1})^2\in P$.\\
+Aus $a, (a^{-1})^2\in P$ folgt $a(a^{-1})^2\in P$ nach Definition 3, d.h. $a^{-1}\in P$\\
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 7}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*)$ ein Koerper mit Einselement e und $\emptyset\neq P\subseteq K$ ein Positivbereich\\
+von K. Dann gilt $e\in P$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 7)}
+\begin{tabbing}
+\begin{tabular}{l}
+Nach Satz 5 gilt $e^2-e\in P$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 8}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\prec)$ ein geordneter Koerper mit Nullelement 0 sowie $a,b,c\in K$ mit $a\prec b$.\\
+Dann gilt :
+a) $0\prec c \Rightarrow ca \prec cb$\\
+b) $c\prec 0 \Rightarrow cb \prec ca$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 8)}
+\begin{tabbing}
+\begin{tabular}{l}
+Ist c=0 oder a=b, dann ist die Aussage klar.\\
+Es seien nun $c \neq 0$ und $a\neq b$.\\
+Aus $a\prec b$ folgt $a-a\prec b-a$, d.h. $0\prec b-a$, d.h. $b-a\in P_<$\\
+wobei $P_<$ ein Positivbereich ist (Satz 3)\\
+a) $0\prec c$ heisst $c\in P_<$, so $c(b-a)\in P_<$ (Definition 3), d.h.\\
+$cb-ca\in P_<$ und $ca \prec_{P_<} cb$, d.h. $ca \prec cb$ nach Bemerkung 2.\\
+b) $c\prec 0$, also $c\prec_{P_<} 0$, d.h. $0-c\in P_<$\\
+somit $(-c)(b-a)\in P_<$, d.h. $ca-cb\in P_<,\;cb\prec_{P_<} ca$\\
+also $cb \prec ca$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 9}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein geordneter Koerper und $a,b\in P_<$.\\
+Ist $a\prec b$, dann $b^{-1} \prec a^{-1}$
+\end{tabular}
+\end{tabbing}
+
 
 
 
