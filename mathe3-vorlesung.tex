@@ -278,9 +278,351 @@ und $b^{-1} \preceq a^{-1}$.
 \end{tabular}
 \end{tabbing}
 
+\paragraph{Beispiel 4}
+\begin{tabbing}
+\begin{tabular}{l}
+Der Körper $(\mathbb{Q},+,*)$ der rationalen Zahlen lässt sich auf genau (V) eine Weise anordnen,\\
+nämlich durch die natürliche Ordnung $\leq$ wobei\\
+$\leq : \{(a,b)\;\exists r\in\mathbb{Q}^+_0\;mit\;a+r=b\}$ \\
+$\mathbb{Q}$ hat dann nur einen Positivbereich nämlich $\mathbb{Q}^+$\\
+($\mathbb{Q}^+$ sind die gebrochenen Zahlen ohne Null)
+\end{tabular}
+\end{tabbing}
 
+\paragraph{Satz 10}
+\begin{tabbing}
+\begin{tabular}{l}
+Es gibt keine totale Ordnung $\preceq$ auf $\mathbb{C}$(Menge der komplexen Zahlen),\\
+so dass $(\mathbb{C},+,*,\preceq)$ ein geordneter Körper ist.
+\end{tabular}
+\end{tabbing}
 
+\paragraph{Beweis (Satz 10)}
+\begin{tabbing}
+\begin{tabular}{l}
+Angenommen, $\preceq$ wäre eine solche totale Ordnung.\\
+Dann gilt $1\in P_<$ nach Satz 7. Nach Satz 6 gilt $c^2-(-1)\in P_<$\\
+Somit $1\in P_<$ und $(-1)\in P_<$, ein Widerspruch zu Definition 3.
+\end{tabular}
+\end{tabbing}
 
+\paragraph{Satz 11 - Bernoullische Ungleichung}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein geordneter Körper mit Einselement e.\\
+Weiter seien $x\in K$ mit $(-e)\preceq x$ und $n\in\mathbb{N}$.\\
+Dann gilt $e+n*x \preceq (e+x)^n$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 11)}
+\begin{tabbing}
+\begin{tabular}{l}
+Durch vollständige Induktion\\
+I.A. n=0 Es gilt $e+0x=e=(e+x)^0$. n=1 Es gilt $(e+1x) = (e+x) - (e+x)^1$.\\
+I.V. n=k Es gilt $(e+kx) \prec (e+x)^k$\\
+I.Bh.n=k+1 Es gilt $(e+(k+1)x) \prec (e+x)^{k+1}$\\
+I.Bew. Aus $(-e) \prec x$ folgt $0 \prec x+e$\\
+und nach I.V. und Satz 8a\\
+$(e+kx)(e+x)\prec (e+x)^{k+1}$ wobei\\
+$(e+kx)(e+x) = e+(k+1)x + kx^2$. Da $x^2\in P\cup\{ 0\}$ (Satz 5) hat man $x^2-0\in P_<\cup\{ 0\}$\\
+und $0 \preceq_{P_<} x^2$, d.h. $0 \preceq x^2$ (Bemerkung 2). Durch\\
+k-fache Addition erhält man $0 \prec kx^2$ (Satz 2)\\
+und $e+(k+1)x \preceq e+(k+1)x + kx^2$ (Satz 2).\\
+Somit $e+(k+1)x \preceq (e+x)^{k+1}$ mit (*) und der Transitivität.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Definition 4}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein geordneter Körper und $a,b\in K$ mit $a\prec b$.\\
+Dann sei :
+$[a,b] := \{ c\in K| a\prec c\prec b\}$ (abgeschlossenes Intervall)\\
+$(a,b) := \{ c\in K| a\prec c\prec b\}$ (offener Intervall)\\
+$(a,b] := \{ c\in K| a\prec c\preceq b\}$ (links-offener Intervall)\\
+$[a,b) := \{ c\in K| a\preceq c\prec b\}$ (rechts-offener Intervall)\\
+a und b heißen Intervallgrenzen, a heißt linker Randpunkt und b heißt rechter Randpunkt.\\
+b-a heißt länge des Intervalls.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 5}
+\begin{tabbing}
+\begin{tabular}{l}
+$(\mathbb{R},+,*,\preceq)\; a=(-1)$ und b=1\\
+$r[-1,1) := \{ r\in\mathbb{R} | -1\preceq r < 1\}$ ist ein \\
+rechts-offener Intervall (links abgeschlossenes Intervall) mit den Intervallgrenzen\\
+$-1 (linker Randpunkt)$ und 1 (rechter Randpunkt) und der Länge $1-(-1)=2$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bezeichnung 4}
+\begin{tabbing}
+\begin{tabular}{l}
+Die in Definition 4 betrachteten Intervalle heißen beschränkte Intervalle\\
+$\infty$ unendlich\\
+$-\infty$ minus unendlich\\
+seien zwei Symbole, die kein Element von K sind.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Definition 5}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein geordneter Körper und $a\in K$. Dann sei\\
+$(-\infty,a) :- \{ c\in K| c\prec a\}$\\
+$(-\infty,a) :- \{ c\in K| c\preceq a\}$\\
+$(a,\infty) :- \{ c\in K| a\preceq c\}$\\
+$(a,\infty) :- \{ c\in K| a\prec c\}$\\
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Vereinbarung 1}
+\begin{tabbing}
+\begin{tabular}{l}
+$\forall a\in K -\infty\prec a\prec\infty$\\
+$-\infty + a = -\infty , \infty + a = \infty$\\
+Ist $0\prec a$ , dann $a*\infty = \infty$ und $a(-\infty) = -\infty$\\
+Ist $a\prec 0$ , dann $a*\infty = -\infty$ und $a(-\infty) = \infty$\\
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 3}
+\begin{tabbing}
+\begin{tabular}{l}
+$-\infty + \infty$, $\infty * (-\infty)$, $0*\infty$, $0*(-\infty)$ sind nicht definiert.
+\end{tabular}
+\end{tabbing}
+
+\subsection{Archimedische und vollständige Körper}
+
+\paragraph{Vereinbarung 2}
+\begin{tabbing}
+\begin{tabular}{l}
+Wir betrachten in diesem Abschnitt stets geordnete Körper $(K,+,*,\preceq)$ mit\\
+$\mathbb{Q}\subseteq K$ und $\preceq$ setzt die natürliche Ordnung $\subseteq$ der rationalen Zahlen fort.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Definition 6}
+\begin{tabbing}
+\begin{tabular}{l}
+Ein geordneter Körper $(K,+,*,\preceq)$ heißt archimedisch, wenn \\
+$\forall a\in K\exists n\in\mathbb{N} (a\preceq n)$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 6}
+\begin{tabbing}
+\begin{tabular}{l}
+$(\mathbb{Q},+,*,\preceq)$ ist archimedisch.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 12}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein archimedischer Körper mit Nullelement 0 und $a\in K$ mit\\
+$0\prec a$. Dann gibt es ein $n\in N\setminus\{ 0\}$ mit $1/n \prec a$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 12)}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $1\prec a$. Dann $1/2 < 1 \prec a$\\
+Es sei $0 \prec a \prec 1$. Dann $a\in P_<$, d.h. $a^{-1} \prec n$, d.h.\\
+$1/n \prec a $ nach Satz 9.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 13}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\prec)$ ein archimedischer Körper mit Nullelement 0 und \\
+$x,a\in K$ mit $0 \prec x$. Dann gibt es ein $n\in \mathbb{N}$ mit $a\prec nx$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 13)}
+\begin{tabbing}
+\begin{tabular}{l}
+Nach Definition 6 gibt es ein $l\in\mathbb{N}$ mit a<l.\\
+Es sei $1 \preceq x$. Dann $l\preceq lx$ nach Satz 8a, d.h.\\
+a < lx (Transitivität)\\
+Es sei $0\prec x\prec 1$. Dann existiert nach Satz 12 ein $n\in\mathbb{N}\setminus\{ 0\}$ mit\\
+$1/m \prec x$. Dann $m/m \prec ax$, d.h. $1\prec mx$. Nach obigen Betrachtungen\\
+existiert ein $l\in N$ mit $a\prec (lm)x$, wobei $lm\in\mathbb{N}$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 14}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein archimedischer Körper und $y,b\in K$ mit $1\prec b$.\\
+Dann gibt es ein $n\in\mathbb{N}$ mit $y\prec b^n$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beweis (Satz 14)}
+\begin{tabbing}
+\begin{tabular}{l}
+Aus $1\prec b$ folgt $-1+1\prec b-1$, d.h.\\
+$0\prec b-1$ nach Satz 2. Nach Satz 13 gibt es ein $n\in\mathbb{N}$ mit\\
+$y<n(b-1)$. Mit Satz 11 ergibt sich $1+n(b-1)\preceq (1+(b-1))^n = b^n$.\\
+Wegen $y\prec n(b-1)$ gilt $y\prec n(b-1)+1$. Die Transitivität liefert $y\prec b^n$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 15 - ohne Beweis}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein archimedischer Körper und $q,e\in K$ mit $0\prec q \prec 1$ und\\
+$0\prec e$. Dann gibt es ein $n\in\mathbb{N}$ mit $q^n\prec e$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 16 - ohne Beweis}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein archimedischer Körper mit $a\in K$.\\
+Dann existiert genau ein $z\in\mathbb{Z}$ mit $z\preceq a \preceq z+1$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bezeichnung 5}
+\begin{tabbing}
+\begin{tabular}{l}
+$\lfloor a\rfloor = z$ heißt Abrundung von a
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 7}
+\begin{tabbing}
+\begin{tabular}{l}
+$a= -1,7\; \lfloor -1,7\rfloor = -2$, denn $-2 \leq -1,7 \leq -1$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 4}
+\begin{tabbing}
+\begin{tabular}{l}
+Zu jedem $a\in K$ gibt es genau ein $z\in\mathbb{Z}$ mit 
+$z-1\preceq a \preceq z$, $\lceil a\rceil :- z$ heißt Aufrundung von a
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 8}
+\begin{tabbing}
+\begin{tabular}{l}
+$a = -1,7$, $\lceil -1,7\rceil = -1$, denn\\
+$-2 = (-1)-1 \preceq -1,7 \preceq -1$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Definition 7}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei $(K,+,*,\preceq)$ ein geordneter Körper. $\mathbb{Q}$ liegt dicht im Körper\\
+wenn gilt, für alle $x,y\in K$ mit $x<y$ existiert ein $q\in\mathbb{Q}$ mit $x\prec q\prec y$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Satz 17 - ohne Beweis}
+\begin{tabbing}
+\begin{tabular}{l}
+Ist $(K,+,*,\preceq)$ ein archimedischer Körper.\\
+So liegt $\mathbb{Q}$ dich im $(K,+,*,\preceq)$.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 9}
+\begin{tabbing}
+\begin{tabular}{l}
+$\mathbb{Q}$ liegt dich in $(\mathbb{Q},+,*,\preceq)$
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bemerkung 5}
+\begin{tabbing}
+\begin{tabular}{l}
+Sind $a,b\in K$ mit $a\prec b$, dann $(a,b)\cap\mathbb{Q\neq\emptyset}$\\
+wenn $\mathbb{Q}$ dicht in K liegt.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Definition 8}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei M eine Menge und $\preceq$ eine Ordnung auf M sowie $B\subseteq M$.\\
+B heißt \\
+- nach oben beschränkt, wenn ein $x\in M$ mit $b\preceq x$ für\\
+alle $b\in B$ existiert (x heißt obere Schraube)\\
+- nach unten beschränkt, falls ein $x\in M$ mit $x\preceq b$\\
+für alle $b\in B$ existiert (x heißt untere Schranke)\\
+- beschränkt, wenn B nach oben und unten beschränkt ist.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Bezeichnung 6}
+\begin{tabbing}
+\begin{tabular}{l}
+Sup(B) ist die kleinste obere Schranke (Supremum von B)\\
+Inf(B) ist die größte untere Schranke (Infimum von B)\\
+Ist $Sup(B)\in B$, dann heißt das Supremum Maximum von B\\
+Ist $Inf(B)\in B$, dann heißt das Infimum Minimum von B.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 10a)}
+\begin{tabbing}
+\begin{tabular}{l}
+$(\mathbb{R},+,*,\preceq)\;B=[5,6)$. 5 ist Minimum von B, 6 ist Supremum von B aber\\
+nicht Maximum von B (existiert nicht)
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 10b)}
+\begin{tabbing}
+\begin{tabular}{l}
+$B = [5,\infty)$ B hat kein Supremum\\
+-5 ist das Minimum von B.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 10c)}
+\begin{tabbing}
+\begin{tabular}{l}
+$B = \{ n/n+1 | n\in\mathbb{N}\setminus\{ 0 \}\}$\\
+$1/2$ ist Minimum von $B(Inf(B)=Min(B)=1/2)$\\
+1 ist das Supremum von $B(Sup(B)=1)$\\
+es gibt kein Maximum.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Definition 9}
+\begin{tabbing}
+\begin{tabular}{l}
+Es sei M eine Menge und $\preceq$ eine totale Ordnung auf M.\\
+$\preceq$ erfüllt die Supremum-Eigenschaft, wenn für jedes\\
+$\emptyset\neq B\subseteq M$ gilt : Ist B nach oben beschränkt, dann\\
+existiert das Supremum von B.\\
+$\preceq$ erfüllt die Infimum-Eigenschaft, wenn für jedes\\
+$\emptyset\neq B\subseteq M$ gilt : Ist B nach unten beschränkt, dann existiert\\
+das Infimum von B.
+\end{tabular}
+\end{tabbing}
+
+\paragraph{Beispiel 11}
+\begin{tabbing}
+\begin{tabular}{l}
+$(\mathbb{Z},+,*,\preceq)$ und $(\mathbb{N},+,*,\preceq)$ haben beide Infimum und Supremum-Eigenschaft.\\
+$(\mathbb{Q},+,*,\preceq)$ hat nicht die Supremum-Eigenschaft,\\
+denn die nach oben beschränkte Menge\\
+$B=\{q\in\mathbb{Q} | q^2 < 2\}$ hat kein Supremum.
+\end{tabular}
+\end{tabbing}
 
 
 
